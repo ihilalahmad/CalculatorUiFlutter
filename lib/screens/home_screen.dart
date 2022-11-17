@@ -37,24 +37,22 @@ class _HomeScreenState extends State<HomeScreen> {
                 Expanded(
                   child: Padding(
                     padding: const EdgeInsets.all(20),
-                    child: Row(
+                    child: Column(
                       mainAxisAlignment: MainAxisAlignment.end,
+                      crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          crossAxisAlignment: CrossAxisAlignment.end,
-                          children: [
-                            Text(
-                              userInput.toString(),
-                              style: const TextStyle(
-                                  fontSize: 30, color: Colors.white),
-                            ),
-                            Text(
-                              answer.toString(),
-                              style: const TextStyle(
-                                  fontSize: 30, color: Colors.white),
-                            ),
-                          ],
+                        Align(
+                          alignment: Alignment.bottomRight,
+                          child: Text(
+                            userInput.toString(),
+                            style: const TextStyle(
+                                fontSize: 30, color: Colors.white),
+                          ),
+                        ),
+                        Text(
+                          answer.toString(),
+                          style: const TextStyle(
+                              fontSize: 30, color: Colors.white),
                         ),
                       ],
                     ),
